@@ -1,6 +1,6 @@
 # Homework by UIST602
 
-Oh, my mighty homework. Thanks to @pyos, dg language is so capable and relaxing. You don't have to worry about most of the stuff.
+Oh, my mighty homework. Thanks to [@pyos](https://github.com/pyos), dg language is so capable and relaxing. You don't have to worry about most of the stuff.
 
 This POC is intended to guarantee my high score on Machine Learning (UIST602), postgraduate, OMU, Data Science Mast.
 
