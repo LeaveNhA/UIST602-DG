@@ -8,7 +8,7 @@ This POC is intended to guarantee my high score on Machine Learning (UIST602), p
 
 Understanding programming can be a huge challenge. Even in this cosmopolitan field, Data Scientists are suffering from having thin (or none) background of Software Engineering or basicly, SE principles, et. al.
 
-Solving a problem with more than one perspective can give person not just another perspective on the problem and set of solutions, it can give a better understanding over things. So, the surface is the same (the problem) but the eye-range is more, imagine that you are looking with a different tool other than your glasses, like microscope, or something like that. Seeing deeper is helpful. Conceptually, this approach is being in use by many education professional or cult organizations.
+Solving a problem with more than one perspective can give person not just another perspective on the problem and set of solutions, it can give a better understanding over things. So, the surface is the same (the problem) but the eye-range is more, imagine that you are looking with a different tool other than your glasses, like microscope, or something like that. Seeing deeper is helpful. Conceptually, this approach is being in use by many education professionals or cult organizations.
 
 ## How to?
 
