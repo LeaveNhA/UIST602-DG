@@ -10,13 +10,21 @@ Understanding programming can be a huge challenge. Even in this cosmopolitan fie
 
 Solving a problem with more than one perspective can give person not just another perspective on the problem and set of solutions, it can give a better understanding over things. So, the surface is the same (the problem) but the eye-range is more, imagine that you are looking with a different tool other than your glasses, like microscope, or something like that. Seeing deeper is helpful. Conceptually, this approach is being in use by many education professional or cult organizations.
 
+## How to?
+
+You can follow this repository easly. The filenames are matching with original homework implementations of mine. Not just the filenames, since the original homework's specification contains Jupyter Notebook implementation, you can match Input by Input. You can compare two implementations, first Python on Jupyter Notebook and Dg implementation.
+
+## Note
+
+Educational purposes only!
+
 ## Prerequisite
 
 Let's clear about what you need to have in order to see the Sun!, (sorry) the graphics of the datasets!
 
 ### Python
 
-Obviously.
+Obviously. But preferably, `v3.6.15`.
 
 ### dg
 
