@@ -4,7 +4,7 @@ plt = import '/matplotlib/pyplot'
 # Yapılandırmalar:
 # Grafiklerin ana-akış işleci durdurmaması için??
 # plt.ion!
-showGraphicalOutput = False
+showGraphicalOutput = True
 
 # Gösterişli çıktılar:
 print = bind print 'Out []:\n' end: '\n---\n\n'
