@@ -1,0 +1,68 @@
+# In [1]:
+
+# plt, grafikleme için içeri alınıyor:
+plt = import '/matplotlib/pyplot'
+
+# Göğüs Kanseri veriseti, SK'nin içinde, erişeç ile veriyi alabiliyoruz.
+loadBreastCancer = import '/sklearn/datasets/load_breast_cancer'
+
+# ---
+
+# In [2]:
+#CHN {Örnek basitliği için, veriyi çift (tuple) formatında aldık.
+#     Bunu da `return_X_y` bayrağını aktif ederek yapıyoruz.}
+cancerData = loadBreastCancer return_X_y: True
+
+# ---
+
+# In [3]:
+
+# Veriyi [:kitle-etiketi (iyi/kötü huylu, ikilik),
+#         [:ortalama yarıçap (mean-radius),
+#          :ortalama doku (mean-texture)]]
+# yapıya şekillendiriyoruz. Artık biliyoruz ki, etikete göre
+# filtre, grup, sınıflama yapabilir, veriyi yönetebiliriz.
+targetLocationData = map tuple' (cancerData !! 1) (map (xs -> (take 2 xs |> list)) (cancerData !! 0)) |> list
+
+# Matplotlib temel ayarları:
+fig = plt.figure figsize: [10, 8]
+# ___________________???
+ax = fig.add_subplot 111
+# Meraklısına, ileri okuma:
+# https://matplotlib.org/3.5.0/api/figure_api.html#matplotlib.figure.Figure.add_subplot
+
+# Grafiksel veriyi kırmızı ve mavi ayrımıyla tasarladığımız için,
+# Kırmızı: Kötü Huylu (Malignant)
+redDots = targetLocationData |> filter (x -> (x |> head |> == 0)) |> list
+# Mavi: İyi Huylu (Benign)
+blueDots = targetLocationData |> filter (x -> (x |> head |> == 1)) |> list
+
+# _______________________________________ ..'den şeklinde okunabilir.
+# Yardımcı bir fonksiyon: Noktalar verisi -> x, y kordinat ikilisi veri listesi
+
+# ________________________________________________________________________________________________liste yap
+# __________________________________________________________________________Veriyi dikeyde eşle
+# __________________________________________________________________liste yap
+# __________________________________________________________noktalar
+# __________________________________X_'den, ikinci verisine
+# _____________________________Her birisi için
+# _________________________..'den
+# ____________________argüman
+getLocationFromDots = dots -> (map (x -> x |> tail |> head) dots |> list |> (xs -> (zip *:xs)) |> list)
+
+# _________*: veriler liste olarak saklanıyor, onları açmak için.
+# ____________verilerden x, y değerlerini hesapla.
+ax.scatter *:(getLocationFromDots redDots) c: 'r'
+# __________________________________________c: bildiğiniz renk parametresi.
+ax.scatter *:(getLocationFromDots blueDots) c: 'b'
+
+# Aşina olduğunuz gibi, x, y düzlemlerini
+# isimlendirmek için:
+ax.set_xlabel "Mean Radius"
+ax.set_ylabel "Mean Texture"
+
+# Tabi ki grafiğin gösterilmesi için.
+# Argümansız çağırımlarda `!` sembolü kullanılıyor.
+plt.show!
+
+# ---
