@@ -36,4 +36,4 @@ In order to run Doge in Jupyter Notebook ecosystem, I wrote a [naive (as a start
 
 ## Run
 
-After meet that requirement, you can run the files by python -m dg #filename, i.e `python -m dg ./W2\ -\ 5\ students.dg`.
+After meet the requirements, you can run the files by Jupyter Notebook.
