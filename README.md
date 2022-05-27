@@ -30,6 +30,10 @@ Obviously. But preferably, `v3.6.15`.
 
 Install and test the dg language by [original repository](https://github.com/pyos/dg).
 
+### idg
+
+In order to run Doge in Jupyter Notebook ecosystem, I wrote a [naive (as a starter) Kernel](https://github.com/LeaveNhA/idg) for Jupyter. So, we finally can run Doge as Notebook!
+
 ## Run
 
 After meet that requirement, you can run the files by python -m dg #filename, i.e `python -m dg ./W2\ -\ 5\ students.dg`.
